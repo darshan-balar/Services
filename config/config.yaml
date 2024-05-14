@@ -1,0 +1,19 @@
+# Database Configuration
+dev:
+  host: localhost
+  port: 5432
+  username: darshan
+  password: darshan
+  database: test
+
+prod:
+  host: localhost
+  port: 5432
+  username: prod_user
+  password: prod_password
+  database: prod_db
+
+queries:
+  listingQuery: SELECT service_id, name, description, version_count FROM Services ORDER BY {condition} LIMIT $1 OFFSET $2
+  serviceQuery: SELECT service_id, name, description, version_count FROM Services WHERE name=$1
+  versionQuery: SELECT version_name, description FROM Versions WHERE service_id=$1
