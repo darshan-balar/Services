@@ -7,7 +7,7 @@ dev:
   database: test
 
 prod:
-  host: localhost
+  host: prod_host
   port: 5432
   username: prod_user
   password: prod_password

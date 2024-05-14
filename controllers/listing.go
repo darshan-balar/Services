@@ -36,6 +36,7 @@ func (s *ServiceController) Services(w http.ResponseWriter, r *http.Request) {
 
 	inputParams := make(map[string]interface{})
 
+    // Parse the request and get the input parameters
 	err := parseServiceRequest(r, inputParams)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
@@ -43,6 +44,7 @@ func (s *ServiceController) Services(w http.ResponseWriter, r *http.Request) {
 	}
 	params := make([]interface{}, 0)
 
+    // Build the query based on the input parameters
 	query := serviceQueryBuilder(&params, inputParams, r)
 
 	// Execute the query with an offset parameter
@@ -54,6 +56,7 @@ func (s *ServiceController) Services(w http.ResponseWriter, r *http.Request) {
 	}
 	defer rows.Close()
 	var services []Service
+    // Iterate over the rows and scan the values into a struct
 	for rows.Next() {
 		var service Service
 		if err := rows.Scan(&service.ServiceID, &service.Name, &service.Description, &service.VersionCount); err != nil {
