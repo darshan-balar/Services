@@ -50,14 +50,14 @@ The API can be configured using environment variables. Some of the key variables
 
 The API exposes the following endpoints:
 
-- `GET /services`: Retrieves a list of resources.
-- `GET /versions`: Retrieves a specific resource by ID.
+- `GET /services`: Retrieves a list of services.
+- `GET /versions`: Retrieves a specific service versions by ID.
 
 For detailed information about each endpoint, refer to the API documentation.
 
 ## Examples
 
-### Retrieve Resources
+### Retrieve Services
 
 **Request:**
 
@@ -99,7 +99,7 @@ curl --location --request GET 'localhost:8081/services?page=1&limit=2&name=Servi
 ```
 
 
-### Retrieve Resource by ID
+### Retrieve Versions by ID
 
 **Request:**
 
