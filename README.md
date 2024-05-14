@@ -27,8 +27,8 @@ The API was designed with a focus on simplicity, ease of use, and performance. I
 
 ## Trade-offs
 
-- **Simplicity vs. Flexibility**: The API prioritizes simplicity over flexibility, limiting the number of configuration options to reduce complexity.
-- **Performance**: Certain design choices were made to optimize performance
+- **Simplicity vs. Flexibility**: The API prioritizes simplicity over flexibility, limiting the number of configuration options to reduce complexity. 
+- **Performance**: Certain design choices were made to optimize performance. We can add a cacheing layer for improved performance. Not added logging currently. if the complexity increases we can add logging. Tried avoiding third party libraries. We can add orm package for more complex database operations
 
 ## Usage
 
